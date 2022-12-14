@@ -28,6 +28,23 @@ body{
     justify-content: space-between;
 }
 
+
+.today{
+    height: 35px;
+    width: auto;
+    text-align: center;
+    line-height: 35px;
+    background: #f1b4ff;
+    cursor: pointer;
+    padding: 0 5px;
+    border-radius: 25%;
+}
+
+.today:hover {
+    background: #ba56b0;
+    color: rgb(231, 255, 220);
+}
+
 header .current-date{
     font-size: 1.45rem;
     font-weight: 500;

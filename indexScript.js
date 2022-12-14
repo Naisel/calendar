@@ -1,5 +1,7 @@
 const currentDate = document.querySelector(".current-date");
 const daysTag = document.querySelector(".days");
+const gotoToday = document.querySelector(".today");
+
 const prevNextIcon = document.querySelectorAll(".icons span");
 
 let date = new Date();
@@ -55,6 +57,16 @@ const renderCalender = () => {
 
 renderCalender();
 
+gotoToday.addEventListener("click", () => {
+  date = new Date();
+  today = date.getDate();
+  todayMonth = date.getMonth();
+  todayYear = date.getFullYear();
+  currYear = todayYear;
+  currMonth = todayMonth;
+  renderCalender();
+});
+
 prevNextIcon.forEach((icon) => {
   icon.addEventListener("click", () => {
     currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
@@ -72,3 +84,6 @@ prevNextIcon.forEach((icon) => {
     renderCalender();
   });
 });
+
+
+
